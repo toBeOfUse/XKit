@@ -4,7 +4,7 @@
 //* DEVELOPER giantpredatorymollusk **//
 //* FRAME false **//
 //* BETA false **//
-XKit.extensions.likestravel = new Object({
+XKit.extensions.view_old_likes = new Object({
 
 	running: false,
     
@@ -82,7 +82,7 @@ XKit.extensions.likestravel = new Object({
 		let sample = aside.find("h1")[0];
 		let sampleStyle = getComputedStyle(sample);
 		let activator = document.createElement("h1");
-		activator.id = "xkit-likes-travel-activator";
+		activator.id = "xkit-view-old-likes-activator";
 		activator.style.color = sampleStyle.color;
 		activator.style.fontWeight = sampleStyle.fontWeight;
 		activator.style.fontSize = sampleStyle.fontSize;
@@ -96,11 +96,11 @@ XKit.extensions.likestravel = new Object({
 			}).catch(()=>console.log("did not get date to travel back to"));
 		};
 		$(aside).prepend(activator);
-		XKit.tools.init_css("likestravel");
+		XKit.tools.init_css("view_old_likes");
 	},
 
 	destroy: function() {
 		this.running = false;
-		$("#likesTravelActivator").remove();
+		$("#xkit-view-old-likes-activator").remove();
 	}
 });
